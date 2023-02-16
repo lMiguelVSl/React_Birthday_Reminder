@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { List } from './List'
 
 export const App = () => {
+
+  const [people, setPeople] = useState(['miguel']);
+
+  const setPeopleFunc = () => {
+    setPeople([]);
+  }
+
   return (
     <>
       <main>
         <section>
-          <h3>birthdays today</h3>
-          <button className='btn btn-primary'>clear all</button>
+          <h3>{people.length} birthdays today</h3>
+          <List people={people} />
+          <button className='btn btn-primary' onClick={setPeopleFunc}>clear all</button>
         </section>
       </main>
     </>
