@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import data from '../assets/data';
 import { List } from './List'
 
 export const App = () => {
 
-  const [people, setPeople] = useState([]);
+  const [people, setPeople] = useState(data);
 
   const setPeopleFunc = () => {
     setPeople([]);
