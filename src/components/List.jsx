@@ -1,9 +1,19 @@
 import React from 'react'
 
-export const List = (people) => {
+export const List = ({ people }) => {
     return (
         <>
-            <h1>List Component</h1>
+            {
+                people.map(([id, name, age, image]) => (
+                    <article key={id} className="person">
+                        <img src={image} alt={name} />
+                        <div>
+                            <h4>{name}</h4>
+                            <p>{age} years</p>
+                        </div>
+                    </article>
+                ))
+            }
         </>
     )
 }

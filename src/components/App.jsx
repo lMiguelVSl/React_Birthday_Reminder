@@ -3,7 +3,7 @@ import { List } from './List'
 
 export const App = () => {
 
-  const [people, setPeople] = useState(['miguel']);
+  const [people, setPeople] = useState([]);
 
   const setPeopleFunc = () => {
     setPeople([]);
