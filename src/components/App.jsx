@@ -13,10 +13,10 @@ export const App = () => {
   return (
     <>
       <main>
-        <section>
+        <section className='container'>
           <h3>{people.length} birthdays today</h3>
           <List people={people} />
-          <button className='btn btn-primary' onClick={setPeopleFunc}>clear all</button>
+          <button onClick={setPeopleFunc}>clear all</button>
         </section>
       </main>
     </>
